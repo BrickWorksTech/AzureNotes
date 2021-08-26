@@ -1,0 +1,2 @@
+TCO Calculator can calculate the cost of on premise VS cloud
+no dynamic VMS?

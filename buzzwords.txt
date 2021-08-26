@@ -1,0 +1,5 @@
+infrastructure as a service (IaaS)
+platform as a service (PaaS)
+Role-Based Access Control (RBAC)
+REST API
+design-first approach

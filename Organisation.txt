@@ -1,0 +1,38 @@
+Resource Groups -> Resource
+Tag
+
+Create a Resource Group
+    Azure portal Home
+    Create a resource
+    Type Resource group in the search box
+
+Create the policy definition
+    search for Policy
+    Definitions pane from the Authoring
+    Click + Policy definition in the top menu.
+    Policy rule template= 
+        {
+        "mode": "Indexed",
+        "policyRule": {
+            "if": {
+            "field": "[concat('tags[', parameters('tagName'), ']')]",
+            "exists": "false"
+            },
+            "then": {
+            "effect": "deny"
+            }
+        },
+        "parameters": {
+            "tagName": {
+            "type": "String",
+            "metadata": {
+                "displayName": "Tag Name",
+                "description": "Name of the tag, such as 'environment'"
+            }
+            }
+        }
+        }
+
+Create a policy assignment
+    policy pane, select Assignments
+    Assign policy
